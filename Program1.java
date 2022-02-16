@@ -3,7 +3,7 @@ public class Program1 {
     
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Math problem: Ciel and A-B Problem \n");
+        System.out.println("Welcome to Math problem: Ciel and A-B Problem (https://www.codechef.com/problems/CIELAB)\n");
         System.out.println("Enter an Integer for A: ");
         Scanner in = new Scanner(System.in);
         int A = in.nextInt();
