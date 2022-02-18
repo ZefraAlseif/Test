@@ -20,7 +20,7 @@ Sum = x1 + x2 + x3;
          
          disp('The best conversion rate is to convert 1:1, the following value is that coin');
          disp(value);
-      
+         
     else
          disp('Either conversion rate works');
          disp([x1 x2 x3]);
