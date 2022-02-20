@@ -8,9 +8,9 @@ prompt = 'Input the data (digits) in the format [1 A B 0 A B 1 A B . . .] (If th
 X = input(prompt);
 count = 0;
 heads = 0;
-for i=0:actions-1
-    if (X(1,(i*3)+1) ~=0)
-        for j=(i*3)+2:(i*3)+3
+for i=1:actions
+    if (X(1,(i-1)*3+1) ~=0)
+        for j=X(1,(i-1)*3+2)+1:X(1,(i-1)*3+3)+1
             if (C(1,j) == 1)
                 heads = heads +1 ;
             end
@@ -18,7 +18,7 @@ for i=0:actions-1
         disp(heads);
         heads = 0;
     else
-        for j=(i*3)+2:(i*3)+3
+        for j=X(1,(i-1)*3+2)+1:X(1,(i-1)*3+3)+1
             if (C(1,j) == 0)
                 C(1,j) = 1;
             else
