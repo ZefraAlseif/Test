@@ -1,0 +1,65 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) {
+    // your code goes here
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+    boolean check = true;
+		// Check to see if 1<=a,b<=100
+		if ((a>0 && a<=100) && (b>0 && b<=100)){
+      int counter = Math.max(a,b);
+      // Stores the factors of a & b
+      for (int i=2;i<=counter;i++){
+          if (a % i == 0 && b % i == 0){
+          System.out.println("Constraint failed: a and b do not have any common factors.");
+          check = false;
+          break;
+          }
+      }
+      if (check == true){
+        System.out.println("Height is: "+Math.max(a,b));
+      }
+    }
+    else{
+      System.out.println("Constraint failed: 1<= a,b <=100");      
+    }
+  }
+}
+
+
+/* // your code goes here
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		// Check to see if 1<=a,b<=100
+		if ((a>0 && a<=100) && (b>0 && b<=100)){
+      int counter = Math.min(a,b);
+      List<Integer> factors = new ArrayList<Integer>();
+      // Stores the factors of a & b
+      for (int i=2;i<=counter;i++){
+          if (counter % i == 0){
+              factors.add(i);
+          }
+      }
+      counter = Math.max(a,b);
+      for (int i =2; i<=counter;i++){
+          if (counter % i == 0){
+              factors.add(i);
+          }
+      }
+      
+          Set<Integer> set = new HashSet<Integer>(factors);
+          if(set.size() < factors.size()){
+             System.out.println("Constraint failed: a and b do not have any common factors.");
+          }
+          else {
+            System.out.println("Height is: "+Math.max(a,b));
+          }
+    }
+    else {
+      System.out.println("Constraint failed: 1<= a,b <=100");
+    } */
