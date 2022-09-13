@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    int [] scores = new int[3];
+    if (T>=1 && T <=1000){
+      for (int i = 0; i<T;i++){
+        for (int j = 0; j<3;j++){
+          int temp = sc.nextInt();
+          if (temp>=0 && temp <=100){
+            scores[j] = temp;
+          }
+          else {
+            System.out.println("Constraint failed: 0≤A,B,C≤100");
+            break;
+          } 
+        }
+          if ((Math.addExact(scores[0],scores[1]) / 2) < 35 |           
+          (Math.addExact(scores[1],scores[2]) / 2) < 35 | 
+          (Math.addExact(scores[2],scores[0]) / 2) < 35)
+        {
+          System.out.println("FAIL");
+        }
+        else{
+          System.out.println("PASS");
+        }
+      }
+    }
+    else{
+    System.out.println("Constraint failed: 1≤T≤1000");
+    }  
+  }
+}
