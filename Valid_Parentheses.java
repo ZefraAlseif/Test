@@ -10,7 +10,7 @@ boolean result = true;
         vp.put("{","}");
         while (!list.isEmpty()){
             String temp = list.get(0);
-            if (list.contains(vp.get(temp))){
+            if (list.get(1).equals(vp.get(temp))){
                 list.remove(temp);
                 list.remove(vp.get(temp));
             }
@@ -18,9 +18,11 @@ boolean result = true;
                 result = false;
                 break;
             }
-        }
+        } 
         return result;
     }
+
+
 */
 
 import java.util.Arrays;
@@ -29,7 +31,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-// Specific case of the parenthese being in the next index
+// Works for all cases taking into account order and completeness
 public class Valid_Parentheses {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -52,7 +54,7 @@ public class Valid_Parentheses {
         vp.put("{","}");
         while (!list.isEmpty()){
             String temp = list.get(0);
-            if (list.get(1).equals(vp.get(temp))){
+            if (list.contains(vp.get(temp))){
                 list.remove(temp);
                 list.remove(vp.get(temp));
             }
@@ -60,7 +62,7 @@ public class Valid_Parentheses {
                 result = false;
                 break;
             }
-        } 
+        }
         return result;
     }
 }
