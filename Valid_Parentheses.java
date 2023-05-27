@@ -25,10 +25,10 @@ boolean result = true;
 
 */
 
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.List;
+//import java.util.List;
 import java.util.Scanner;
 
 // Works for all cases taking into account order and completeness
@@ -40,6 +40,7 @@ public class Valid_Parentheses {
             String temp = sc.next();
             System.out.println(isValid(temp));
         }
+        sc.close();
     }
 
     public static boolean isValid(String s) {
